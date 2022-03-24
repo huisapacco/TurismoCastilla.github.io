@@ -1,3 +1,9 @@
+body, html {
+    overflow-x: hidden;
+} 
+#navbar{
+    z-index: 1;
+}
 #games{
     background: rgb(255,255,255);
     background: url(../img/bg-02.png),  linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(99,196,255,1) 57%);
