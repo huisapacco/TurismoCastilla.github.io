@@ -1,0 +1,154 @@
+.flex{
+	width: 100%;
+	height:100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.textos{
+	padding:300px;
+	color:rgb(0, 0, 0);
+	text-align: center;
+}
+
+h1{
+	font-size: 40px;
+	margin-bottom:20px;
+}
+
+a{
+	text-decoration: none;
+	font-size:20px;
+	display: inline-block;
+	padding: 7px;
+	width: 220px;
+	border:1px solid #fff;
+	border-radius: 10px;
+	color:#fff;
+}
+a:hover{background: #000; color:#fff; border:1px solid #000;}
+
+.modal{
+	display: none;
+	position: fixed;
+	z-index:1;
+	overflow: auto;
+	left: 0;
+	top:0;
+	width: 100%;
+	height:100%;
+	background: rgba(0, 0, 0, 0.452);
+}
+
+.contenido-modal{
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	width: 30%;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+	animation-name: modal;
+	animation-duration: 1s;
+}
+@keyframes modal{
+	from{top:-330px; opacity:0;}
+	to{top:0; opacity:1;}
+}
+.close{
+	color: #f2f2f2;
+	font-size:30px;
+	font-weight: bold;
+}
+.close:hover{
+	color:#7f8c8d;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header, .footer{
+	padding: 8px 16px;
+	background: #34495e;
+	color:#f2f2f2;
+}
+
+p{
+	text-align: justify;
+}
+
+.modal-body{
+	padding: 20px 16px;
+}
+
+@media screen and (max-width:900px){
+	.contenido-modal{
+		width: 70%;
+	}
+	.textos{
+		padding: 150px;
+	}
+}
+
+@media screen and (max-width:500px){
+	.textos{
+		padding:50px;
+	}
+}
+
+
+.social-sharing {
+	display: block;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	bottom: 0;
+}
+.social-sharing ul.menu-social {
+	list-style: none;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrapwrap;
+	flex-wrap: nowrap;
+}
+
+.social-sharing ul.menu-social li {
+	flex: 0 1 40px;
+	height: 40px;
+}
+.social-sharing ul.menu-social li.newsletter {
+	flex: 1 1 auto;
+	line-height: 40px;
+	position: relative;
+	background-color: #fafafa;
+	background-image: repeating-linear-gradient(135deg, #ffe4e1 0px, #ffe4e1 5px, transparent 5px, transparent 10px, #e1f3ff 10px, #e1f3ff 15px, transparent 15px, transparent 20px);
+}
+.social-sharing ul.menu-social li.next {
+	flex: 1 1 auto;
+}
+ul.menu-social li a::before {
+	content: "\f135";
+	display: inline-block;
+	font-family: FontAwesome;
+	font-size: 20px;
+	vertical-align: middle;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 40px;
+}
+ul.menu-social li a[href*="facebook.com"]::before {
+	content: "\f09a";
+}
+ul.menu-social li a[href*="twitter.com"]::before {
+	content: "\f099";
+}
+ul.menu-social li a[href*="pinterest.com"]::before {
+	content: "\f231";
+}
+ul.menu-social li a[href*="whatsapp://send"]::before {
+	content: "\f232";
+}
