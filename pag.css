@@ -1,16 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
 body, html {
+    background-image: url(img/fondo.jpg);
+    background-blend-mode: multiply;
     overflow-x: hidden;
+    font-family: 'Merriweather', serif;
 } 
 #navbar{
     z-index: 1;
+    filter: brightness(150%);
 }
-#games{
-    background: rgb(255,255,255);
-    background: url(../img/bg-02.png),  linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(99,196,255,1) 57%);
-    background-repeat: repeat-x;
-    background-size: 75%;
-    margin-top: -20px;
-}
+
 .card-border{
     border: solid 3px white;
     border-radius: 20px;
@@ -18,11 +19,31 @@ body, html {
     transition: all ease-out 0.2s;
 }
 .card-border:hover{
-    transform: scale(1.2);
+    transform: scale(1.15);
     
 }
+.stl{
+    filter: brightness(80%);
+}
 
+.a{
+    text-decoration: none;
+}
+.nav-link:hover{
+    font-weight: 600;
+    border-bottom: solid 2px white;
+}
 
-
+#btnflotantey{
+    background-color: rgb(255, 80, 104);    
+    position: relative;
+    margin-top: -20px;    
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    border-top-left-radius: 50px ;
+    border-top-right-radius: 50px ;
+    border-bottom-left-radius: 10px ;
+    border-bottom-right-radius: 10px ;
+    font-family: 'Merriweather', serif;
+}
 
 

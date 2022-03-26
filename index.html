@@ -1,372 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="footer.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
-      crossorigin="anonymous"
-    />
-    tablero o dashboard
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/eb496ab1a0.js"
-      crossorigin="anonymous"
-    ></script>
-    <title>Turismo en Castilla</title>
-  </head>
-  <div
-    class="modal fade"
-    id="exampleModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
-  >
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <div class="modal-body">...</div>
-        <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            data-bs-dismiss="modal"
-          >
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="pag.css" />
+
+  <link rel="shortcut icon" href="logo.ico" />
+  <title>Turismo Castilla</title>
+</head>
+
+<!--Modal
+  <style>
+    #modal-content-img {
+      max-width: 100%;
+    }
+  </style>
+  <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content-img">
+        <img src="modallargo.jpg" class="modal-content-img" />
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button class="btn btn-dark" type="button">Cerrar</button>
         </div>
       </div>
     </div>
   </div>
+  <script>
+    $(document).ready(function () {
+      $("#Modal").modal("show");
+    });
+  </script> col-md-4
+  Fin Modal-->
+<header class="mb-auto">
+  <!--Nav-->
+  <div class="container claro">
+    <nav class="navbar navbar-expand-md navbar-dark bg-danger fixed-top border-bottom" id="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="pag.html">
+          <img src="Logo largo.png" alt="" width="250" class="img-fluid" />
+        </a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse claro" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link f" aria-current="page" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#lugarturistico">Lugares Turisticos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ubicaciones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contactos">Contactos</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!--Fin Nav-->
+</header>
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#" id="abrir">Turismo Castilla</a>
+<body>
+  <!--Carrusel-->
+  <div class="carousel slide stl igual" id="mainSlider" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="portada1.png" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="portada1.png" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+  </div>
+  <!--Fin Carrusel-->
 
-      <div id="miModal" class="modal">
-        <div class="flex" id="flex">
-          <div class="contenido-modal">
-            <div class="modal-header flex">
-              <h2>Promociones</h2>
-              <span class="close" id="close">&times;</span>
+
+
+  <div id="btnflotantey" class="container w-50 pl-5 pr-5 rounded-lg">
+    <h3 class="text-center pb-5 pt-5 h1">Lugares Turisticos</h3>
+  </div>
+
+
+
+
+
+
+  <!-- Lista de sitios-->
+  <div id="lugarturistico">
+    <div class="container-md p-5">
+
+
+      <div class="row">
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5" href="pag2.html">
+            <img src="img/valledevolcanes.png" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">Valle de los volcanes</a>
             </div>
-            <div class="modal-body">
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam
-                voluptatum illum temporibus voluptas debitis! Et labore minus
-                praesentium consequuntur mollitia dolores perferendis, voluptas
-                nemo ratione consequatur illum quidem rerum, saepe eveniet ullam
-                eaque quasi neque quo quisquam impedit ducimus voluptatem illo.
-                Quod tenetur aliquam, soluta labore ipsam delectus. Id iusto
-                distinctio minima quaerat nobis asperiores ullam, mollitia illo
-                soluta quisquam natus dicta sint voluptates molestiae!
-                Perferendis quos ea assumenda nulla?
-              </p>
-            </div>
-            <div class="footer">
-              <h3>Invitacion y descuento &copy;</h3>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="img/toromuerto.png" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">Petroglifos Toro muerto</a>
             </div>
           </div>
         </div>
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="img/puentecolgantequiscay.jpg" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">P. Colgante Quiscay</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <script src="script.js"></script>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Historia</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="pag.html">Mapa</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Novedades</a>
-          </li>
-        </ul>
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Busqueda"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Buscar</button>
-        </form>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="img/querulpa.png" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">Huellas de dinosaurio</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="img/virgendelaspeñas.png" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">Virgen de las peñas</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="img/festivalvirgendelsombrero.jpg" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">F. Virgen del Sombrero</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </nav>
-
-  <body>
-    <style>
-      .carousel-item {
-        height: 32rem;
-        background: rgb(68, 68, 68);
-        color: white;
-        position: relative;
-      }
-
-      .container {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding-bottom: 50px;
-      }
-
-      .overlay-image {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 0;
-        background-position: center;
-        background-size: cover;
-        opacity: 0.8;
-      }
-    </style>
-
-    <div
-      id="myCarousel"
-      class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
-    >
-      <ol class="carousel-indicators">
-        <li
-          data-bs-target="#myCarousel"
-          data-bs-slide-to="0"
-          class="active"
-        ></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-      </ol>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="1000">
-          <div
-            class="overlay-image"
-            style="background-image: url(./descarga2.jpg)"
-          ></div>
-          <div class="container">
-            <h1>Primera vista</h1>
-            <p>concepto dreferido a las cosas de la primera vista</p>
-            <a
-              href="#"
-              class="btn btn-lg btn-primary"
-              onclick="location.href='pagina2.html'"
-            >
-              ver mas...
-            </a>
+      <div class="row">
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="img/perfildecristo.png" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">Perfil de cristo</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="img/Torosviraco.png" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">Corridas de toros</a>
+            </div>
           </div>
         </div>
 
-        <div class="carousel-item">
-          <div
-            class="overlay-image"
-            style="background-image: url(./descarga.jpg)"
-          ></div>
-          <div class="container">
-            <h1>Modelo de segunda vista</h1>
-            <p>aqui un texto del concepto</p>
-            <a href="pagina2.html" class="btn btn-lg btn-primary">
-              ver mas...
-            </a>
-          </div>
-        </div>
-
-        <div class="carousel-item 2">
-          <div
-            class="overlay-image"
-            style="background-image: url(./descarga3.jpg)"
-          ></div>
-          <div class="container">
-            <h1>Maravilla tercera</h1>
-            <p>aqui un texto del concepto</p>
-            <a href="#" class="btn btn-lg btn-primary"> ver mas... </a>
+        <div class="col-sm">
+          <div class="card w-100 card-border mb-5">
+            <img src="img/festivalcamaron.png" class="card-img-top" alt="..." />
+            <div class="card-body align-self-center">
+              <a href="pag2.html" class="btn">Festival Corire</a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <ol>
-      <p></p>
-      <p></p>
-    </ol>
+  </div>
+  <!-- Fin de Lista de sitios-->
 
-    <!-- <div class="container">-->
-    <div class="col-md">
-      <div
-        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-      >
-        <div class="col-auto d-none d-lg-block">
-          <img
-            src="descarga.jpg"
-            class="img-thumbnail"
-            alt="..."
-            svg
-            class="bd-placeholder-img"
-            width="300"
-            height="250"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: Thumbnail"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          />
-        </div>
-        <div class="col p-2 d-flex flex-column position-left">
-          <h3 class="mb-0">Nombre del lugar</h3>
-          <div class="mb-1 text-muted">Ubicacion del sitio</div>
-          <p class="card-text mb-auto">
-            Descripcion general del sitio a tratar buscando llamar la atencion y
-            dando una buena impresion.
-          </p>
-          <a href="pagina2.html" class="stretched-">Continuar leyendo</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="col-md">
-      <div
-        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
-      >
-        <div class="col-auto d-none d-lg-block">
-          <img
-            src="descarga2.jpg"
-            class="img-thumbnail"
-            alt="..."
-            svg
-            class="bd-placeholder-img"
-            width="300"
-            height="250"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: Thumbnail"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          />
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-person-video3"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M14 9.5a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-6 5.7c0 .8.8.8.8.8h6.4s.8 0 .8-.8-.8-3.2-4-3.2-4 2.4-4 3.2Z"
-            />
-            <path
-              d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h5.243c.122-.326.295-.668.526-1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v7.81c.353.23.656.496.91.783.059-.187.09-.386.09-.593V4a2 2 0 0 0-2-2H2Z"
-            />
-          </svg>
-        </div>
-        <div class="col p-2 d-flex flex-column position-left">
-          <h3 class="mb-0">Nombre del lugar</h3>
-          <div class="mb-1 text-muted">Ubicacion del sitio</div>
-          <p class="card-text mb-auto">
-            Descripcion general del sitio a tratar buscando llamar la atencion y
-            dando una buena impresion.
-          </p>
-          <a href="#" class="stretched-">Continuar leyendo</a>
-        </div>
-      </div>
-    </div>
 
-    <div class="card" style="max-width: 1300px">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img
-            src="descarga3.jpg"
-            class="img-thumbnail"
-            alt="..."
-            svg
-            class="bd-placeholder-img"
-            width="30000"
-            height="250"
-            xmlns="http://www.w3.org/2000/svg"
-            role="img"
-            aria-label="Placeholder: Thumbnail"
-            preserveAspectRatio="xMidYMid slice"
-            focusable="false"
-          />
-        </div>
 
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title">Nombre del lugartle</h5>
-            <p class="card-text">
-              Descripcion general del sitio a tratar buscando llamar la atencion
-              y dando una buena impresion.
-            </p>
-            <a href="#" class="stretched-">Continuar leyendo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--</div>-->
 
-    <!--::::Pie de Pagina::::::-->
-    <footer class="pie-pagina">
-      <div class="grupo-1">
-        <div class="box">
-          <figure>
-            <a href="#">
-              <img src="logotipo-sleedw.svg" alt="Logo de SLee Dw" />
-            </a>
-          </figure>
-        </div>
-        <div class="box">
-          <h2>SOBRE NOSOTROS</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?
-          </p>
-        </div>
-        <div class="box">
-          <h2>SIGUENOS</h2>
-          <div class="red-social">
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-instagram"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-youtube"></a>
-          </div>
-        </div>
-      </div>
-      <div class="grupo-2">
-        <small
-          >&copy; 2021 <b>SLee Dw</b> - Todos los Derechos Reservados.</small
-        >
-      </div>
-    </footer>
-  </body>
-</html>
+
+
+
